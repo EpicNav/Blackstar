@@ -101,10 +101,9 @@
 		510C2F6327E4B603009ED161 /* Blackstar */ = {
 			isa = PBXGroup;
 			children = (
-				510C2F6427E4B603009ED161 /* AppDelegate.swift */,
-				510C2F6627E4B603009ED161 /* SceneDelegate.swift */,
-				510C2F6827E4B603009ED161 /* ViewController.swift */,
-				510C2F6A27E4B603009ED161 /* Main.storyboard */,
+				510C2F9927E4B705009ED161 /* Views */,
+				510C2F9827E4B6FC009ED161 /* Controllers */,
+				510C2F9727E4B6ED009ED161 /* Delegates */,
 				510C2F7027E4B606009ED161 /* Assets.xcassets */,
 				510C2F7227E4B606009ED161 /* LaunchScreen.storyboard */,
 				510C2F7527E4B606009ED161 /* Info.plist */,
@@ -128,6 +127,31 @@
 				510C2F8A27E4B606009ED161 /* BlackstarUITestsLaunchTests.swift */,
 			);
 			path = BlackstarUITests;
+			sourceTree = "<group>";
+		};
+		510C2F9727E4B6ED009ED161 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				510C2F6427E4B603009ED161 /* AppDelegate.swift */,
+				510C2F6627E4B603009ED161 /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		510C2F9827E4B6FC009ED161 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				510C2F6827E4B603009ED161 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		510C2F9927E4B705009ED161 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				510C2F6A27E4B603009ED161 /* Main.storyboard */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -439,6 +463,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BL9HFGPZXP;
@@ -447,6 +472,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -458,7 +484,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -467,6 +493,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BL9HFGPZXP;
@@ -475,6 +502,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -486,7 +514,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
