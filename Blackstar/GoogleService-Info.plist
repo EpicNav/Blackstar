@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>354772748637-d61dq3gk651ke8qii93f4dn4fa36ifuq.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.354772748637-d61dq3gk651ke8qii93f4dn4fa36ifuq</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDJgrMh6-ppwS5w3Kgr2xc1mBWFBVdgunc</string>
+	<key>GCM_SENDER_ID</key>
+	<string>354772748637</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>games.asura.blackstar</string>
+	<key>PROJECT_ID</key>
+	<string>blackstar-10a0a</string>
+	<key>STORAGE_BUCKET</key>
+	<string>blackstar-10a0a.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:354772748637:ios:1492e8e5c0da8ea07780b4</string>
+</dict>
+</plist>
