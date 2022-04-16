@@ -50,6 +50,21 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
     }
 
+    func changeRootViewController(_ vc: UIViewController, animated: Bool = true) {
+        guard let window = self.window else {
+            return
+        }
+        
+        // change the root view controller to your specific view controller
+        window.rootViewController = vc
+        
+        // Some animation here
+        UIView.transition(with: window,
+                            duration: 0.5,
+                            options: [.transitionCrossDissolve],
+                            animations: nil,
+                            completion: nil)
+    }
 
 }
 

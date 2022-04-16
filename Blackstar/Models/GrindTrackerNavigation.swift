@@ -31,7 +31,6 @@ class GrindTrackerNavigationSections {
 
 let grindTrackerNavigationItems = [
     [
-        GrindTrackerNavigation(section: 0, title: "SUMMARY", icon: UIImage(named: "Logo React"), segueIdentifier: ""),
         GrindTrackerNavigation(section: 0, title: "GLOBAL", icon: UIImage(named: "Logo SwiftUI"), segueIdentifier: "GlobalGrindTracker"),
         GrindTrackerNavigation(section: 0, title: "CUSTOM PRICES", icon: UIImage(named: "Logo SwiftUI"), segueIdentifier: "CustomPricesGrindTracker")
     ],

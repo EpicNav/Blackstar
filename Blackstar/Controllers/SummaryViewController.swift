@@ -23,6 +23,10 @@ class SummaryViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(showCustomPricesGrindTracker), name: NSNotification.Name("ShowCustomPricesGrindTracker"), object: nil)
     }
     
+    convenience init () {
+        self.init(nibName: nil, bundle: nil)
+    }
+    
     @objc func showGlobalGrindTracker() {
         performSegue(withIdentifier: "GlobalGrindTracker", sender: nil)
     }

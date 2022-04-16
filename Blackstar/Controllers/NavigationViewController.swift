@@ -6,24 +6,40 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class NavigationViewController: UIViewController {
 
     @IBOutlet weak var navigationTable: UITableView!
+    @IBOutlet weak var profileButton: UIView!
+    
+    let authHelper = AuthenticationHelper();
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         navigationTable.delegate = self
         navigationTable.dataSource = self
         
-        let indexPath = IndexPath(row: 0, section: 0)
-        navigationTable.selectRow(at: indexPath, animated: true, scrollPosition: .none)
-        let selectedRow = navigationTable.cellForRow(at: indexPath) as! GrindTrackerNavigationTableViewCell
+        // let indexPath = IndexPath(row: 0, section: 0)
+        // navigationTable.selectRow(at: indexPath, animated: true, scrollPosition: .none)
+        /*let selectedRow = navigationTable.cellForRow(at: indexPath) as! GrindTrackerNavigationTableViewCell
         selectedRow.selectedBackgroundView?.backgroundColor = UIColor.white
-        selectedRow.selectedLayerBg.backgroundColor = UIColor(named: "BlurBackground")
+        selectedRow.selectedLayerBg.backgroundColor = UIColor(named: "BlurBackground")*/
+        
+        let profileBtn = UITapGestureRecognizer(target: self, action: #selector(self.openUserProfilePage))
+        self.profileButton.addGestureRecognizer(profileBtn)
         
     }
+    
+    @objc func openUserProfilePage(sender : UITapGestureRecognizer) {
+        // Open Profile Page on Click
+        authHelper.pageSwapper(identifier: "profilePageNavigationIdentifier")
+    }
 
+    @IBAction func logOut(_ sender: Any) {
+        authHelper.performLogout()
+    }
 }
 
 extension NavigationViewController: UITableViewDelegate, UITableViewDataSource {

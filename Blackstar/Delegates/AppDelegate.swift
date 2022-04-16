@@ -8,16 +8,37 @@
 import UIKit
 import CoreData
 import Firebase
+import GoogleSignIn
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
+    var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FirebaseApp.configure()
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        window = UIWindow()
+        
+        if Auth.auth().currentUser == nil {
+            // instantiate the main tab bar controller and set it as root view controller
+            // using the storyboard identifier we set earlier
+            let loginNavController = storyboard.instantiateViewController(identifier: "AuthenticationViewControllerIdentifier")
+            window?.rootViewController = loginNavController
+        } else {
+            // if user isn't logged in
+            // instantiate the navigation controller and set it as root view controller
+            // using the storyboard identifier we set earlier
+            let mainTabBarController = storyboard.instantiateViewController(identifier: "MainViewControllerIdentifier")
+            window?.rootViewController = mainTabBarController
+        }
         return true
+    }
+    
+    @available(iOS 9.0, *)
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        return GIDSignIn.sharedInstance.handle(url)
     }
 
     // MARK: UISceneSession Lifecycle

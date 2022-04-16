@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class AnnouncementsViewController: UIViewController {
     
@@ -14,6 +15,8 @@ class AnnouncementsViewController: UIViewController {
     @IBOutlet weak var cardView: UIView!
     @IBOutlet weak var blurView: UIVisualEffectView!
     @IBOutlet weak var recentUpdatesCollectionView: UICollectionView!
+    
+    let authHelper = AuthenticationHelper()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +32,7 @@ class AnnouncementsViewController: UIViewController {
     }
     
     @objc func onClickCardView(_ sender:UITapGestureRecognizer){
-        performSegue(withIdentifier: "viewAnnouncementDetailSegue", sender: nil)
+        // performSegue(withIdentifier: "viewAnnouncementDetailSegue", sender: nil)
     }
 
 }
